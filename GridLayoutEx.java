@@ -8,7 +8,7 @@ public class GridLayoutEx extends JFrame {
 		setTitle("GridLayout Sample");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		GridLayout grid = new GridLayout(6, 2);
+		GridLayout grid = new GridLayout(7, 2);
 		grid.setVgap(5);
 		
 		Container c = getContentPane();
@@ -17,16 +17,26 @@ public class GridLayoutEx extends JFrame {
 		c.add(new JTextField(""));
 		c.add(new JLabel(" 학번"));
 		c.add(new JTextField(""));
-		c.add(new JLabel(" 생년월일"));
-		c.add(new JTextField(""));
 		c.add(new JLabel(" 학과"));
 		c.add(new JTextField(""));
-		c.add(new JLabel(" 성별"));
+		c.add(new JLabel(" 생년월일"));
 		c.add(new JTextField(""));
 		c.add(new JLabel(" 전화번호"));
 		c.add(new JTextField(""));
+		c.add(new JLabel(" 성별 "));
 		
-		setSize(400, 300);
+		ButtonGroup g = new ButtonGroup();
+		
+		JRadioButton male = new JRadioButton("남성");
+		JRadioButton female = new JRadioButton("여성");
+		
+		g.add(male);
+		g.add(female);
+		
+		c.add(male);
+		c.add(female);
+		
+		setSize(400, 200);
 		setVisible(true);
 	}
 
